@@ -1,10 +1,10 @@
-# [Türkiye Geliştiriciler Topluluğu](https://discord.gg/sxDUNnX) - Algoritma Soruları & Çözümleri
+## [Türkiye Geliştiriciler Topluluğu](https://discord.gg/sxDUNnX) - Algoritma Soruları & Çözümleri
 
-> Burada çeşitli algoritmalar ve bir çok dildeki çözümlerini bulabilirsiniz.
+Burada çeşitli algoritmalar ve bir çok dildeki çözümlerini bulabilirsiniz.
 
-**Website:** [https://www.programlamasorulari.tk/](https://www.programlamasorulari.tk/)
+> **Website:** [https://www.programlamasorulari.tk/](https://www.programlamasorulari.tk/)
 
-# Yönlendirme
+## Yönlendirme
 * [A Kategorisi](src/a)
     * [1A](src/a/1) - Şanslı Sayılar
 * [B Kategorisi](src/b)
