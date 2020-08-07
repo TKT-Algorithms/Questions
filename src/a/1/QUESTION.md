@@ -1,4 +1,4 @@
-# [Soru 1A](https://www.programlamasorulari.tk/a-kategorisi/1A)
+# [Soru 1A](https://www.programlamasorulari.tk/a-kategorisi/1A) - Şanslı Sayılar
 
 ## Bilgilendirme (Briefing)
 - Soru İsmi: **Şanslı Sayılar**
