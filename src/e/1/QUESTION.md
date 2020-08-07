@@ -26,7 +26,7 @@
  1. Yapay zeka kazanması ya da berabere kalması için kullanacağı stratejilerden en kısasını seçer. **(200 puan)**
  
 ## Örnek
-![Tic Tac Toe Örnek](https://lh6.googleusercontent.com/yR2HMOn9i3NzAVYA0_El7r-Oufw6UniTdtPfvdLYKsjXCgAPwe80Ek07wq0iU9AhEhddKmfQOjGS2bYjrTzlIDH5KLXDFfslV68t6eh6_rUQQ4O4dLfg=w1280)
+![Tic Tac Toe Örnek](https://i.hizliresim.com/MA9uI5.png)
  
 ## Çözüm
 Bu soruyu çözmek için bir karar ağacı kullanabilirsiniz. Bunun için de Minimax Algoritması oldukça işimize yarıyor.
