@@ -31,4 +31,6 @@ Başka bir çözüm yöntemi olarak ise kendiniz bütün şanslı sayıları bir
 **Zaman karmaşıklığı:** O(n)
 
 ## Çözümler
-* [PHP](answer.php)
+* [PHP](php_answer.php)
+* [C++](cpp_answer.cpp)
+* [C](c_answer.c)

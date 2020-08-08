@@ -35,4 +35,8 @@ Cevabımız max(EnBüyükFark / 2, caddeBaşı, caddeSonu) olacaktır.
 **Zaman karmaşıklığı:** O(n log n) 
 
 ## Çözümler
-* [PHP](answer.php)
+* [PHP](php_answer.php)
+* [Java 1](java_answer-1.java)
+* [Java 2](java_answer-2.java)
+* [Python](python_answer.py)
+* [C#](cs_answer.cs)

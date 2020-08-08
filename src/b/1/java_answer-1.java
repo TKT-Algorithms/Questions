@@ -1,104 +1,45 @@
+import java.math.BigDecimal;
+import java.util.Arrays;
 import java.util.Scanner;
 
-public class Test
-{
+public class Soru_1B {
+    public static void main(String[] args) {
+        // değişkenler
+        Scanner input = new Scanner(System.in);
+        String veriAl;
+        long sokakUzunlugu, lambaKonum[];
+		int lambaSayisi;
+        double isikYaricapi = 0;
 
-	public static void main(String[] args)
-	{
-		Scanner scan=new Scanner(System.in);
-		
-		System.out.println("");
-		
-		int lambAmount=scan.nextInt();
-		int lengthOfStreet=scan.nextInt();
-		
-		int[] array=new int[lambAmount];
-		
-		for(int i=0;i<lambAmount;i++) 
-		{
-			array[i]=scan.nextInt();
-		}
-		
-		System.out.println(minimumLightRadius(lambAmount,lengthOfStreet,array));
-		
-		scan.close();
-		
-		
-	}
-	
-	
-	//Assume that lambAmount==positionOfLambs.length
-	public static double minimumLightRadius(int lambAmount,int lengthOfStreet,int[] positionsOfLambs) 
-	{
-		bubbleSort(positionsOfLambs);
-		
-		double maxDistance=0;   //Variable to store maximum distance between two lambs
-		double difference=0;    //Temporary variable
-		
-		for(int i=0;i<positionsOfLambs.length-1;i++) 
-		{
-			difference=positionsOfLambs[i+1]-positionsOfLambs[i];
-			if(difference>maxDistance) 
-			{
-				maxDistance=difference;
+        int a = 0;
+
+        // verileri alma
+        // ilk satır verileri
+        veriAl = input.nextLine();
+        lambaSayisi = Integer.parseInt(veriAl.split(" ")[0]);
+        sokakUzunlugu = Long.parseLong(veriAl.split(" ")[1]);
+        lambaKonum = new long[lambaSayisi];
+
+        // ikinci satır verileri
+        veriAl = input.nextLine();
+        for (int i = 0; i < lambaSayisi; i++) {
+        	lambaKonum[i] = Long.parseLong(veriAl.split(" ")[i]);
+        }
+		Arrays.sort(lambaKonum); // sokak lambalarını konumlarına göre sıraladık
+
+		// lambaKonum[0] - 0 = lambaKonum[0]
+		if (lambaKonum[0] > isikYaricapi)
+			isikYaricapi = lambaKonum[0];
+		// en uzak noktadan en sondaki lambanın konumunun farkı
+		if (sokakUzunlugu - lambaKonum[lambaKonum.length - 1] > isikYaricapi)
+			isikYaricapi = sokakUzunlugu - lambaKonum[lambaKonum.length - 1];
+		// yan yana 2 lamba arası mesafeyi ışık yarıçapıyla kıyaslar
+		for (int i = 0; i < lambaKonum.length - 1; i++) {
+			if (((double) Math.abs(lambaKonum[i] - lambaKonum[i + 1])) / 2 > isikYaricapi) {
+				isikYaricapi = ((double) Math.abs((lambaKonum[i] - lambaKonum[i + 1])) / 2);
 			}
 		}
-		
-		//Checks whether maxDistance can adjust the boundaries
-		double lowerDifference=positionsOfLambs[0]-(maxDistance/2);
-		double upperDifference=lengthOfStreet-(positionsOfLambs[positionsOfLambs.length-1] + (maxDistance/2));
-		
-		
-		if(lowerDifference<0) 
-		{
-			lowerDifference=0;
-		}
-		
-		if(upperDifference<0) 
-		{
-			upperDifference=0;
-		}
-		
-		if((lowerDifference==0) || (upperDifference>lowerDifference))
-		{
-			return (maxDistance/2)+upperDifference;
-		}
-		
-		else if((upperDifference==0) || (lowerDifference>=upperDifference))
-		{
-			return (maxDistance/2)+lowerDifference;
-		}
-		
-		return 0;
-		
-		
-		
-	}
-	
-	
-	
-	public static void bubbleSort(int[] array) 
-	{
-		for(int i=0;i<array.length;i++) 
-		{
-			for(int j=0;j<array.length;j++) 
-			{
-				if((i!=j) && (array[i]<array[j]))
-				{
-					swap(array,i,j);
-				}
-			}
-			
-		}
-	}
-	
-	
-	
-	public static void swap(int[] array,int first,int second) 
-	{
-		int temp=array[second];
-		array[second]=array[first];
-		array[first]=temp;
-	}
 
+		System.out.println(new BigDecimal(isikYaricapi));
+	}
 }

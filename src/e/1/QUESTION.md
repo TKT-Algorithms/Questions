@@ -38,4 +38,6 @@ En basit olarak Minimax Algoritması, ihtimaller havuzu içinden en iyi ve en k�
 **Zaman karmaşıklığı:** O(bM) b = mümkün olan hareketler, m = ağacın maksimum derinliği 
 
 ## Çözümler
-*Bu soru halen sürüyor...* 
+* [PHP](php_answer.php)
+* [Python](python_answer.py)
+* [CPP](cpp_answer.cpp)
