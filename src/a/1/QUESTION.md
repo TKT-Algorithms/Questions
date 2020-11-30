@@ -32,5 +32,6 @@ Başka bir çözüm yöntemi olarak ise kendiniz bütün şanslı sayıları bir
 
 ## Çözümler
 * [PHP](php_answer.php)
+* [Go](go_answer.cpp)
 * [C++](cpp_answer.cpp)
 * [C](c_answer.c)
